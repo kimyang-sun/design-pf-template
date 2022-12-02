@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Template by Kim</title> <!-- 페이지 타이틀 -->
+  <meta name="description" content="Portfolio Template by Kim Yang Sun" /> <!-- 페이지 설명 -->
+  <meta name="author" content="Kim" />
+</head>
+
+<!-- Favicon (페이지 아이콘 이미지)-->
+<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="./img/favicon_152.png">
+
+<!-- Import Files -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<link rel="stylesheet" href="./src/lib/slick.css">
+<link rel="stylesheet" href="./src/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
+<script src="./src/lib/splitting.min.js"></script>
+<script src="./src/index.js" defer></script>
+<body>
+  <!-- 헤더 영역 -->
+  <header class="header">
+    <div class="header-logo">
+      <strong>NAME</strong> TEMPLATE
+    </div>
+  </header>
+
+  <!-- 메인 영역 -->
+  <main id="fullpage">
+    <div class="section" id="section1">
+      <div class="section-inner">
+        <div class="title-area">
+          <div class="title-text">
+            <strong class="title">TEMPLATE TITLE <br>UXUI GUI DESIGN</strong> <!-- 타이틀 텍스트 수정영역 -->
+          </div>
+          <div class="title-text blur-text">
+            <svg>
+              <filter id="shadow-in">
+                <feGaussianBlur stdDeviation="8" result="offset-blur"></feGaussianBlur>
+                <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"></feComposite>
+                <feFlood flood-color="white" result="color"></feFlood>
+                <feComposite operator="in" in="color" in2="inverse" result="shadow"></feComposite>
+                <feComposite operator="over" in="shadow" in2="SourceGraphic"></feComposite>
+              </filter>
+            </svg>
+            <strong class="title">TEMPLATE TITLE <br>UXUI GUI DESIGN</strong> <!-- 타이틀 텍스트 수정영역 -->
+          </div>
+        </div>
+        <div class="amim-elements">
+          <span class="cloud cloud01"></span>
+          <span class="cloud cloud02"></span>
+          <span class="arrow arrow01"></span>
+          <span class="arrow arrow02"></span>
+          <span class="circle circle01"></span>
+          <span class="circle circle02"></span>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="section2">
+      <div class="section-inner">
+        <div class="work-wrap">
+          <h2 class="work-title">Works</h2>
+
+          <!-- 필터 리스트 : 만약 필터명이 변경되면 button 태그 안에 data-filter 값과 내부 텍스트를 변경하고, data 폴더 안에 list.json 파일에서 filter 값을 맞춰주면 됩니다. -->
+          <div class="slide-control">
+            <div class="drag-icon"><i class="xi-arrows-h"></i></div>
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button type="button" class="filter-button active" data-filter="all">All</button>
+              </li>
+              <li class="filter-item">
+                <button type="button" class="filter-button" data-filter="uiux">UIUX design</button>
+              </li>
+              <li class="filter-item">
+                <button type="button" class="filter-button" data-filter="branding">Branding</button>
+              </li>
+              <li class="filter-item">
+                <button type="button" class="filter-button" data-filter="indesign">Indesign</button>
+              </li>
+              <li class="filter-item">
+                <button type="button" class="filter-button" data-filter="ppt">PPT</button>
+              </li>
+            </ul>
+
+            <div class="slide-nav">
+              <button class="slide-prev slide-arrow">
+                <span class="blind">이전</span>
+                <i class="xi-long-arrow-left"></i>
+              </button>
+              <button class="slide-next slide-arrow">
+                <span class="blind">다음</span>
+                <i class="xi-long-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="slide-box">
+            <!-- 슬라이드에 들어갈 아이템은 data/list.json 파일에 추가해주면 됨 -->
+            <div class="work-slide"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 레이어 팝업 -->
+  <div class="layer-wrap">
+    <div class="layer-inner">
+      <div class="layer-img">
+        <img src="./img/pf_img01.jpg" alt="작업물 상세 이미지">
+        <i class="xi-close-thin"></i>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
